@@ -1,0 +1,13 @@
+[package]
+name = "shariki-engine"
+edition.workspace = true
+license.workspace = true
+version.workspace = true
+
+[dependencies]
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+shariki-core.workspace = true
+
+[dev-dependencies]
+hound = "3.5.1"

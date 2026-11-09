@@ -1,0 +1,29 @@
+# Rust build output
+/target/
+**/*.rs.bk
+*.pdb
+
+# Renders from `shariki render` (default: <preset>.wav in the current directory).
+# Sound samples meant to be versioned live under assets/ or samples/ (Git LFS).
+/*.wav
+
+# Profiling / debugging
+*.profraw
+*.profdata
+flamegraph.svg
+perf.data*
+
+# Editors / OS
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Local agent files
+CLAUDE.md
+.claude/
+
+# Image-generation sidecars (prompt + params next to each generated image)
+assets/ai-gen/*.json

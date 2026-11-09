@@ -1,0 +1,14 @@
+[workspace]
+resolver = "3"
+members = ["crates/core", "crates/triki", "crates/motion", "crates/engine", "crates/shariki"]
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+version = "0.1.0"
+
+[workspace.dependencies]
+shariki-core = { path = "crates/core" }
+triki-ble = { path = "crates/triki" }
+shariki-motion = { path = "crates/motion" }
+shariki-engine = { path = "crates/engine" }

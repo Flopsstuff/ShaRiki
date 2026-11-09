@@ -1,0 +1,16 @@
+[package]
+name = "triki-ble"
+edition.workspace = true
+license.workspace = true
+version.workspace = true
+
+[dependencies]
+btleplug = "0.13"
+futures = "0.3"
+shariki-core.workspace = true
+thiserror = "2"
+tokio = { version = "1", features = ["rt", "sync", "time", "macros"] }
+uuid = "1"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "signal", "time"] }

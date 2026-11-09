@@ -1,0 +1,137 @@
+{
+  "presets": [
+    {
+      "id": "maracas",
+      "name": "Maracas",
+      "description": "Gourd full of seeds: woody rattle, accented 'chk' on each reversal (STK Maraca)",
+      "source": "STK Maraca: 25 beans, systemDecay 0.999 (decay = 1/(44100*(1-0.999)) s), soundDecay 0.95, resonance 3200 Hz r 0.96, equalisation (1, -1, 0) (one-zero high-pass 'gourd'). Bead count raised to 400 for a denser rattle.",
+      "params": {
+        "beads": 400,
+        "decay": 0.022676028,
+        "damping": 1.0,
+        "size": 1.0,
+        "sensitivity": 1.0,
+        "gain": 1.0
+      },
+      "sound_decay": 0.95,
+      "resonances": [
+        { "freq": 3200, "radius": 0.96, "gain": 1.0, "vary": 0.0 }
+      ],
+      "body": "highpass",
+      "level": 5.5,
+      "flow_shake_tau": null
+    },
+    {
+      "id": "cabasa",
+      "name": "Cabasa",
+      "description": "Steel bead chains scraping a ridged cylinder: dense, bright, raspy hiss (STK Cabasa)",
+      "source": "STK Cabasa: 512 beads, systemDecay 0.997 (decay = 1/(44100*(1-0.997)) s), soundDecay 0.96, resonance 3000 Hz r 0.7 (very broad), equalisation (1, -1, 0). Bead count raised to 3000.",
+      "params": {
+        "beads": 3000,
+        "decay": 0.0075585265,
+        "damping": 1.0,
+        "size": 1.0,
+        "sensitivity": 1.0,
+        "gain": 1.0
+      },
+      "sound_decay": 0.96,
+      "resonances": [
+        { "freq": 3000, "radius": 0.7, "gain": 1.0, "vary": 0.0 }
+      ],
+      "body": "highpass",
+      "level": 6.0,
+      "flow_shake_tau": null
+    },
+    {
+      "id": "shekere",
+      "name": "Shekere",
+      "description": "Gourd wrapped in a net of beads: crisp, airy, high rattle (STK Sekere)",
+      "source": "STK Sekere: 64 beans, systemDecay 0.999 (decay = 1/(44100*(1-0.999)) s), soundDecay 0.96, resonance 5500 Hz r 0.6, equalisation (1, 0, -1) (band-pass: zeros at DC and Nyquist). Bead count raised to 400.",
+      "params": {
+        "beads": 400,
+        "decay": 0.022676028,
+        "damping": 1.0,
+        "size": 1.0,
+        "sensitivity": 1.0,
+        "gain": 1.0
+      },
+      "sound_decay": 0.96,
+      "resonances": [
+        { "freq": 5500, "radius": 0.6, "gain": 1.0, "vary": 0.0 }
+      ],
+      "body": "bandpass",
+      "level": 3.6,
+      "flow_shake_tau": null
+    },
+    {
+      "id": "egg",
+      "name": "Egg shaker",
+      "description": "Small plastic egg with fine grains: bright, short, tight 'tsk' (derived from Maraca/Sekere)",
+      "source": "Not in STK. Derived from Maraca/Sekere: a small plastic shell (higher, less resonant body: 5200 Hz r 0.9 plus an 8000 Hz r 0.8 shell overtone), fine sand-like fill (40 grains in the original derivation, 250 here), shorter clicks (soundDecay 0.92 vs 0.95) and a short system decay (~15 ms: a small egg stops rattling almost immediately). High-pass (1, -1, 0) equalisation.",
+      "params": {
+        "beads": 250,
+        "decay": 0.015,
+        "damping": 1.0,
+        "size": 1.0,
+        "sensitivity": 1.0,
+        "gain": 1.0
+      },
+      "sound_decay": 0.92,
+      "resonances": [
+        { "freq": 5200, "radius": 0.9, "gain": 1.0, "vary": 0.0 },
+        { "freq": 8000, "radius": 0.8, "gain": 0.5, "vary": 0.0 }
+      ],
+      "body": "highpass",
+      "level": 4.2,
+      "flow_shake_tau": null
+    },
+    {
+      "id": "ganza",
+      "name": "Ganza",
+      "description": "Metal tube of steel shot: loud, metallic 'tch-tch' sizzle (derived from STK Tambourine/Sandpaper)",
+      "source": "Metal tube filled with shot; not in STK. Derived from STK Tambourine (fixed shell resonance 2300 Hz r 0.96 -> 2600 Hz tube body; jingle resonances 5600/8100 Hz r 0.99, randomly detuned +/-5 % per collision, Tambourine varyFactor 0.05) plus the broad Sandpaper/Sekere-style grit band (4500 Hz r 0.6) for the hiss of many small pellets. 128 objects in the original derivation (between Sekere and Cabasa; 800 here), soundDecay 0.96, systemDecay 0.9985 (Tambourine; decay = 1/(44100*(1-0.9985)) s). Band-pass (1, 0, -1) equalisation.",
+      "params": {
+        "beads": 800,
+        "decay": 0.015117053,
+        "damping": 1.0,
+        "size": 1.0,
+        "sensitivity": 1.0,
+        "gain": 1.0
+      },
+      "sound_decay": 0.96,
+      "resonances": [
+        { "freq": 2600, "radius": 0.96, "gain": 0.3, "vary": 0.0 },
+        { "freq": 5600, "radius": 0.99, "gain": 0.8, "vary": 0.05 },
+        { "freq": 8100, "radius": 0.99, "gain": 1.0, "vary": 0.05 },
+        { "freq": 4500, "radius": 0.6, "gain": 0.7, "vary": 0.0 }
+      ],
+      "body": "bandpass",
+      "level": 2.0,
+      "flow_shake_tau": null
+    },
+    {
+      "id": "rainstick",
+      "name": "Rainstick",
+      "description": "Turn it over and pebbles trickle down for seconds; shaking adds a rattle (tilt-driven)",
+      "source": "Not in STK. Tilt-driven grain flow (flow_shake_tau set; decay is the grain-flow time). Resonances follow STK Bamboo chimes (2800 Hz with 0.8x / 1.2x partners, varyFactor 0.2) but with a much lower pole radius (0.97 vs 0.995) so the pins 'tick' instead of ringing, plus STK Little Rocks' 9000 Hz r 0.843 band (varyFactor 0.18) for pebble grit.",
+      "params": {
+        "beads": 32,
+        "decay": 2.0,
+        "damping": 1.0,
+        "size": 1.0,
+        "sensitivity": 1.0,
+        "gain": 1.0
+      },
+      "sound_decay": 0.95,
+      "resonances": [
+        { "freq": 2240, "radius": 0.97, "gain": 0.6, "vary": 0.2 },
+        { "freq": 2800, "radius": 0.97, "gain": 0.6, "vary": 0.2 },
+        { "freq": 3360, "radius": 0.97, "gain": 0.6, "vary": 0.2 },
+        { "freq": 9000, "radius": 0.843, "gain": 0.3, "vary": 0.18 }
+      ],
+      "body": "bandpass",
+      "level": 3.9,
+      "flow_shake_tau": 0.03
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+[package]
+name = "shariki-motion"
+edition.workspace = true
+license.workspace = true
+version.workspace = true
+
+[dependencies]
+shariki-core.workspace = true

@@ -1,0 +1,22 @@
+[package]
+name = "shariki"
+edition.workspace = true
+license.workspace = true
+version.workspace = true
+
+[dependencies]
+shariki-core.workspace = true
+triki-ble.workspace = true
+shariki-motion.workspace = true
+shariki-engine.workspace = true
+clap = { version = "4.6.7", features = ["derive"] }
+cpal = "0.18.2"
+rtrb = "0.4.1"
+anyhow = "1.0.104"
+futures = "0.3.34"
+tokio = { version = "1.54.1", features = ["rt-multi-thread", "macros", "signal", "time"] }
+hound = "3.5.1"
+crossterm = { version = "0.29.0", features = ["event-stream"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+libc = "0.2.191"
